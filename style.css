@@ -1,0 +1,61 @@
+﻿*{box-sizing:border-box}
+html{margin:0;width:100%;overflow-x:hidden;scroll-behavior:smooth;scrollbar-width:none}
+html::-webkit-scrollbar{display:none}
+body{margin:0;width:100%;min-width:320px;background:#eee9de;color:#f4ead7}
+.experience{position:relative;height:240vh;background:#0b1f1a}
+#frame{position:sticky;top:0;width:100%;height:100vh;height:100svh;overflow:hidden;background:#0b1f1a}
+#scene{width:1440px;height:810px;position:absolute;transform-origin:top left;overflow:hidden;background:#8ba5af}
+#hero-depth{position:absolute;inset:0;width:1440px;height:810px;transform-origin:720px 420px;will-change:transform}
+#sky-reveal{position:absolute;z-index:1;inset:0;width:1440px;height:810px;overflow:hidden;opacity:0;pointer-events:none;will-change:opacity}
+#sky-reveal>img:first-child{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 44%;filter:saturate(.9) brightness(.82);transform:scale(1.035);will-change:transform}
+.kyoto-reveal-copy{position:absolute;top:18%;left:clamp(28px,5vw,72px);width:min(560px,56vw);color:#fff8ed;text-align:left;text-shadow:0 2px 22px #263044aa}
+.kyoto-reveal-copy p{margin:0 0 14px;font:10px/1.5 "Yu Mincho","Noto Serif CJK JP",Georgia,serif;letter-spacing:.24em}
+.kyoto-reveal-copy h2{margin:0;font:500 clamp(37px,4.4vw,62px)/1.35 "Yu Mincho","Noto Serif CJK JP","MS Mincho",serif;letter-spacing:.08em}
+.kyoto-reveal-copy span{display:block;margin-top:16px;font:italic 16px/1.7 Georgia,serif;color:#fff1dcd9}
+.hero{position:absolute;left:0;top:0;width:1440px;height:810px;object-fit:cover;pointer-events:none;user-select:none}
+#curtain{position:absolute;inset:0;width:1440px;height:810px;touch-action:pan-y}
+.kyoto-layout{position:absolute;inset:0;z-index:3;width:100%;height:100%;pointer-events:none}
+.site-header{position:absolute;top:0;left:0;right:0;height:clamp(82px,11.2vh,104px);padding:0 clamp(28px,5.2vw,76px);display:grid;grid-template-columns:1fr;align-items:center;background:linear-gradient(180deg,#07141bc9 0%,#07141b75 64%,transparent 100%);color:#fff2d9}
+.brand,.header-note,.header-link,.eyebrow,.hero-caption,.story-link,.story-index,.story-footer{font-family:"Yu Mincho","Noto Serif CJK JP","MS Mincho",Georgia,serif;letter-spacing:.14em}
+.brand{justify-self:center;text-align:center;color:#fff2d9;text-decoration:none;font-size:15px;line-height:1.1;pointer-events:auto}
+.brand span{display:block;margin-top:8px;color:#f0e5cfb8;font-size:10px}
+.header-note{margin:0;text-align:center;color:#f1e8d5b8;font-size:9px}
+.header-link{justify-self:end;padding:0 0 7px;border-bottom:1px solid #f1e8d5;color:#fff2d9;text-decoration:none;font-size:10px;pointer-events:auto}
+.header-link span,.story-link span{margin-left:15px;color:#ff9b68}
+.hero-copy{position:absolute;left:clamp(30px,5.2vw,76px);top:34%;width:min(420px,36vw);text-shadow:0 3px 24px #061018b8}
+.eyebrow{margin:0 0 24px;color:#f2e8d2d9;font-size:10px}
+h1{margin:0;color:#fff0d4;font-family:"Yu Mincho","Noto Serif CJK JP","MS Mincho",serif;font-size:clamp(62px,6.4vw,92px);font-weight:500;line-height:1.02;letter-spacing:.045em}
+h1 span{display:block}
+.translation{margin:18px 0 28px;color:#ffb477;font-family:Georgia,serif;font-size:26px;font-style:italic}
+.intro{max-width:250px;margin:0;color:#f1e8d5d6;font-size:13px;line-height:1.9;letter-spacing:.03em}
+.hero-note{position:absolute;right:clamp(30px,5.7vw,82px);top:35%;width:170px;display:flex;flex-direction:column;align-items:flex-start;gap:28px;text-shadow:0 2px 18px #07141b}
+.vertical-copy{height:150px;margin:0;color:#fff0d4;font-family:"Yu Mincho","Noto Serif CJK JP","MS Mincho",serif;font-size:17px;line-height:1.9;writing-mode:vertical-rl;letter-spacing:.14em}
+.note-copy{margin:0;color:#f1e8d5d6;font-family:Georgia,serif;font-size:14px;font-style:italic;line-height:1.8}
+.story-link{padding:0 0 6px;border-bottom:1px solid #f1e8d580;color:#fff2d9;text-decoration:none;font-size:9px;pointer-events:auto}
+.hero-caption{position:absolute;left:clamp(30px,5.2vw,76px);right:190px;bottom:max(18px,env(safe-area-inset-bottom));display:flex;justify-content:space-between;color:#f1e8d5bf;font-size:9px}
+#sound{position:fixed;z-index:10;bottom:max(18px,env(safe-area-inset-bottom));right:max(20px,env(safe-area-inset-right));border:1px solid #fff5;border-radius:30px;padding:9px 17px;background:#0b1f1a80;color:#fff9df;font:12px/1.5 "Yu Mincho","Noto Serif CJK JP",serif;letter-spacing:.12em;cursor:pointer;backdrop-filter:blur(8px)}
+#sound:hover{background:#0b1f1ab0}
+#sound:focus-visible,.site-header a:focus-visible,.hero-note a:focus-visible,.story a:focus-visible{outline:2px solid #fff9df;outline-offset:4px}
+.story{min-height:100vh;padding:55px clamp(24px,8vw,120px) 28px;background:#eee9de;color:#19221f}
+.story-index{display:flex;justify-content:space-between;color:#72776d;font-size:10px}
+.story-content{max-width:1120px;margin:clamp(62px,11vh,120px) auto 70px;display:grid;grid-template-columns:1fr 1fr;gap:clamp(45px,10vw,150px);align-items:center}
+.story-content h2{margin:0;color:#192b42;font-family:"Yu Mincho","Noto Serif CJK JP","MS Mincho",serif;font-size:clamp(42px,5.2vw,74px);font-weight:500;line-height:1.3;letter-spacing:.035em}
+.story-content h2 em{color:#bd3927;font-weight:400}
+.story-copy{max-width:560px;color:#303a38;font-size:14px;line-height:2.1}
+.story-copy p{margin:0 0 20px}
+.story-copy p:last-child{margin-bottom:0;color:#72776d;font-family:Georgia,serif;font-size:16px;font-style:italic;line-height:1.9}
+.story-footer{display:flex;justify-content:space-between;align-items:center;padding-top:18px;border-top:1px solid #19221f30;color:#72776d;font-size:9px}
+.story-footer a{color:#19221f;text-decoration:none}
+@media(max-width:900px){
+ .site-header{padding:0 36px}.hero-copy{left:36px;width:36vw}.hero-note{right:36px;width:130px}.hero-caption{left:36px;right:36px}
+}
+@media(max-width:600px){
+ .experience{height:212vh}.site-header{height:82px;padding:0 22px;grid-template-columns:1fr auto}.header-note{display:none}.brand{font-size:13px}.brand span{font-size:9px}.header-link{font-size:8px}
+ .hero-copy{left:24px;top:auto;bottom:12vh;width:min(275px,72vw)}.eyebrow{margin-bottom:18px;font-size:8px}h1{font-size:clamp(48px,14vw,61px);line-height:.98}.translation{margin:12px 0 17px;font-size:21px}.intro{max-width:210px;font-size:11px}
+ .hero-note{right:22px;top:19vh;width:82px;gap:12px;align-items:flex-end}.vertical-copy{height:90px;font-size:12px}.note-copy{display:none}.story-link{font-size:7px}.story-link span{margin-left:4px}
+ .kyoto-reveal-copy{top:16%;right:20px;left:20px;width:auto;text-align:left}.kyoto-reveal-copy p{font-size:8px}.kyoto-reveal-copy h2{font-size:clamp(34px,10vw,48px)}.kyoto-reveal-copy span{max-width:280px;margin:12px 0 0;font-size:13px}
+ .hero-caption{left:24px;right:24px;bottom:max(18px,env(safe-area-inset-bottom));font-size:7px}.hero-caption span:last-child{display:none}
+ .story{min-height:100svh;padding:30px 24px 24px}.story-index{font-size:8px}.story-content{grid-template-columns:1fr;gap:22px;margin:58px auto 45px}.story-content h2{font-size:40px}.story-copy{font-size:12px}.story-copy p:last-child{font-size:14px}.story-footer{font-size:8px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+

@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1f1a">
+  <meta name="description"
+    content="A quiet Kyoto shrine study. Touch the characters suspended in the torii gate curtain.">
+  <title>Kyoto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="experience" id="top" aria-label="Kyoto shrine introduction">
+    <main id="frame" aria-label="Kyoto shrine with an interactive text curtain">
+      <div id="scene">
+        <div id="hero-depth">
+          <img class="hero" src="assets/hero.jpg" alt="A vermilion torii standing in a quiet Kyoto forest lake"
+            draggable="false">
+          <canvas id="curtain" width="1440" height="810"
+            aria-label="Japanese text strands suspended inside the gate. Move your pointer over them to make them chime and sway."></canvas>
+        </div>
+        <div id="sky-reveal">
+          <img
+            src="https://images.unsplash.com/photo-1733060706694-e3ce4922a3bd?auto=format&amp;fit=crop&amp;fm=jpg&amp;ixlib=rb-4.1.0&amp;q=88&amp;w=3000"
+            alt="Kyoto's pagoda rising above red autumn maples at sunset">
+          <div class="kyoto-reveal-copy" lang="ja">
+            <p>KYOTO · AUTUMN</p>
+            <h2>紅葉の向こう、<br>京都の空へ。</h2>
+            <span>Beyond the maples, Kyoto opens to the evening sky.</span>
+          </div>
+        </div>
+      </div>
+      <div class="kyoto-layout">
+        <header class="site-header">
+          <a class="brand" href="#top" aria-label="Kyoto home">KYOTO</a>
+        </header>
+        <section class="hero-copy" aria-labelledby="hero-title">
+          <p class="eyebrow">A QUIET STUDY OF KYOTO</p>
+          <h1 id="hero-title"><span>&#x6731;&#x306E;</span><span>&#x9CE5;&#x5C45;</span></h1>
+          <p class="translation">The vermilion gate</p>
+          <p class="intro">Where mountain mist meets the sacred path.</p>
+        </section>
+        <aside class="hero-note">
+          <p class="vertical-copy" lang="ja">
+            &#x9727;&#x306E;&#x5411;&#x3053;&#x3046;&#x306B;&#x3001;&#x5343;&#x5E74;&#x306E;&#x7948;&#x308A;&#x3002;</p>
+          <p class="note-copy">A threshold between<br>the everyday and the sacred.</p>
+        </aside>
+        <p class="hero-caption"><span>&#x4F0F;&#x898B;&#x7A32;&#x8377;&#x306E;&#x68EE; / FUSHIMI INARI FOREST</span></p>
+      </div>
+    </main>
+  </section>
+  <button id="sound" type="button" aria-label="Turn chimes on" aria-pressed="false"
+    title="Click to toggle chimes; click the gate once to enable sound, then move over its text">CHIMES OFF</button>
+  <script src="app.js"></script>
+</body>
+
+</html>
